@@ -1,63 +1,56 @@
-Airline Sentiment Analysis ✈️
+# Airline Sentiment Analysis
 
-Author: Anand Mehto
-Domain: Natural Language Processing (NLP) / Sentiment Analysis
-Project Type: Exploratory Data Analysis + NLP + Machine Learning
+## Overview
+This project analyzes tweets related to airlines to determine public sentiment—positive, negative, or neutral—using natural language processing (NLP) techniques. It provides insights into customer opinions and highlights areas for service improvement.
 
-Project Overview
+## Dataset
+The dataset is publicly available on [Kaggle](https://www.kaggle.com/crowdflower/twitter-airline-sentiment) and contains airline-related tweets with sentiment labels.  
 
-This project analyzes airline customer reviews to understand passenger sentiment and identify factors influencing satisfaction. Using NLP techniques and machine learning models, the project classifies reviews into positive, negative, and neutral sentiments and provides insights for airlines to improve customer experience.
+**Key columns:**  
+- `tweet_id`: Unique identifier for each tweet  
+- `airline_sentiment`: Sentiment label (positive, negative, neutral)  
+- `text`: Content of the tweet  
+- `airline`: Airline mentioned in the tweet  
 
-Dataset
+## Objectives
+- Classify tweets as positive, negative, or neutral  
+- Identify trends and patterns in airline sentiment  
+- Visualize sentiment distribution across airlines  
+- Demonstrate NLP preprocessing and machine learning classification  
 
-Source: https://www.kaggle.com/api/v1/datasets/download/mdraselsarker/twitter-us-airline-sentiment-analysis
+## Approach
+1. **Data Cleaning & Preprocessing**  
+   - Remove null values, duplicates, and irrelevant characters  
+   - Tokenization, lowercasing, and stopword removal  
+   - Vectorization using TF-IDF  
 
-Features include:
+2. **Exploratory Data Analysis (EDA)**  
+   - Visualize sentiment distribution  
+   - Identify airline-specific trends  
+   - Generate word clouds for positive and negative tweets  
 
-tweet_id / review_text / airline / sentiment
+3. **Modeling**  
+   - Train models like Random Forest Classifier and XGB Classifier
+   - Evaluate using accuracy, precision, recall, and F1-score  
 
-Other features may include location, date, etc.
+4. **Visualization & Insights**  
+   - Sentiment distribution across airlines  
+   - Common words in positive and negative tweets  
 
-Objectives
+## Tools & Libraries  
+- Pandas, NumPy  
+- Matplotlib, Seaborn, WordCloud  
+- Scikit-learn  
+- NLTK  
 
-Perform exploratory data analysis (EDA) to uncover trends and patterns in airline reviews.
+## Results
+- Best performing model: **[XGB Classfier]**  
+- Accuracy: **[78%]**  
+- Key Insights:  
+  - Certain airlines receive consistently positive or negative feedback  
+  - Common positive/negative keywords identified  
 
-Clean and preprocess text data (removing stopwords, punctuation, and performing tokenization).
-
-Implement NLP techniques such as:
-
-Text vectorization (TF-IDF / CountVectorizer)
-
-Sentiment classification using ML models (Logistic Regression, Naive Bayes, etc.)
-
-Visualize results using graphs and word clouds.
-
-Provide actionable insights for airlines to enhance customer satisfaction.
-
-Key Features / Steps
-
-Data Cleaning: Handling missing values, removing duplicates, and text preprocessing.
-
-Exploratory Data Analysis (EDA): Sentiment distribution, airline-wise comparison, and top keywords.
-
-NLP Processing: Tokenization, stopword removal, lemmatization/stemming.
-
-Model Building: Sentiment classification using ML models and evaluation metrics (accuracy, F1-score).
-
-Visualization: Word clouds, bar charts, and sentiment trends.
-
-Tools & Libraries
-
-Python: pandas, numpy, matplotlib, seaborn
-
-NLP: nltk, scikit-learn, re, wordcloud
-
-Machine Learning: scikit-learn (Logistic Regression, Naive Bayes, etc.)
-
-Results
-
-Achieved 78% on the test set.
-
-Identified top factors influencing positive and negative sentiment.
-
-Created visualizations to communicate findings effectively.
+## Future Work
+- Deploy a real-time sentiment analysis dashboard  
+- Analyze sentiment trends over time  
+- Use deep learning models (LSTM, BERT) for better performance  
